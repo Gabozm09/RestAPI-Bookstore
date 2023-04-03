@@ -19,4 +19,9 @@ public class BookController {
     public List<Book> getBooksByGenre(@RequestParam String genre) {
         return bookService.getBooksByGenre(genre);
     }
+
+    @GetMapping("/books/top-sellers")
+    public List<Book> getTop10Sellers() {
+        return bookService.getTop10Sellers();
+    }
 }
