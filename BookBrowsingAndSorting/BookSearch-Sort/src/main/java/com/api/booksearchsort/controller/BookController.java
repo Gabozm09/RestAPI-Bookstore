@@ -4,6 +4,7 @@ import com.api.booksearchsort.model.Book;
 import com.api.booksearchsort.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,5 +29,10 @@ public class BookController {
     @GetMapping("/books/rating")
     public List<Book> getBooksByRating(@RequestParam double rating) {
         return bookService.getBooksByRating(rating);
+    }
+
+    @PostMapping("/books/discount")
+    public void discountBooksByPublisher(@RequestParam double discountPercent, @RequestParam String publisher) {
+        bookService.discountBooksByPublisher(discountPercent, publisher);
     }
 }
