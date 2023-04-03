@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
@@ -34,5 +35,10 @@ public class BookController {
     @PostMapping("/books/discount")
     public void discountBooksByPublisher(@RequestParam double discountPercent, @RequestParam String publisher) {
         bookService.discountBooksByPublisher(discountPercent, publisher);
+    }
+
+    @PostMapping("/books")
+    public Book addBook(@RequestBody Book book) {
+        return bookService.addBook(book);
     }
 }
