@@ -4,7 +4,7 @@ ShoppingCart
 
 Item
 - Books
-  * created an enum not shore
+  * created an enum not sure if we are adding any other items
 
 Step 2: Reject classes
 
