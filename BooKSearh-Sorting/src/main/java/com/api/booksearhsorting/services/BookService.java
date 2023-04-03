@@ -21,5 +21,8 @@ public class BookService {
     public List<Book> getTop10Sellers() {
         return bookRepository.findTop10ByOrderBySoldCopiesDesc();
     }
-}
 
+    public List<Book> getBooksByRating(double rating) {
+        return bookRepository.findByRatingGreaterThanEqual(rating);
+    }
+}

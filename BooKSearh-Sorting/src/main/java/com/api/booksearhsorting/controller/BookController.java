@@ -24,4 +24,9 @@ public class BookController {
     public List<Book> getTop10Sellers() {
         return bookService.getTop10Sellers();
     }
+
+    @GetMapping("/books/rating")
+    public List<Book> getBooksByRating(@RequestParam double rating) {
+        return bookService.getBooksByRating(rating);
+    }
 }
