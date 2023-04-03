@@ -1,0 +1,22 @@
+Step 1: Suggested List of Classes
+
+ShoppingCart
+
+Item
+- Books
+
+Step 2: Reject classes
+
+ShoppingCart
+
+Item - id, Name, Quantity, Price, ItemType
+
+LineItem
+- quantity
+
+
+Final list of classes:
+- ShoppingCart
+- ShoppingItems
+- ShoppingLineItem
+-
