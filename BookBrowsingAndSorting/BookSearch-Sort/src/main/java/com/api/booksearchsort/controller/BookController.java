@@ -29,4 +29,4 @@ public class BookController {
     public List<Book> getBooksByRating(@RequestParam double rating) {
         return bookService.getBooksByRating(rating);
     }
-}}
+}
